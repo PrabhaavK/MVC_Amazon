@@ -1,0 +1,33 @@
+@model List<AmazonWeb.Models.Product>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model) 
+            {
+                <tr>
+                    <td>@product.ProdId</td>
+                    <td>@product.ProdName</td>
+                    <td>@product.ProdDesc</td>
+                    <td>@product.ProdPrice</td>
+                    <td>@product.ProdType</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
